@@ -36,7 +36,7 @@ Meta 的 Muse 定下了这类智能体的样子；下面是我们还落后于它
 
 ### 让手更常成功 {#hands-that-succeed-more-often}
 
-把屏幕当手，在 Android 和桌面上都能用（桌面的操作器移植自 UI-TARS-desktop）。它失败在定位上（模型指错元素），以及碰到意外弹窗之后的恢复；而且我们还没有一组固定的任务来衡量它。
+把屏幕当手，在 Android 和桌面上都能用（桌面的操作器移植自 UI-TARS-desktop）。它失败在定位上（模型指错元素），以及碰到意外弹窗之后的恢复。[GUI 回归任务集](gui-regression.md) 已提供固定模拟场景，用于运行时回归和按需比较模型；真实设备的定位与恢复仍需收集失败轨迹。
 
 - 模块：`nanomuse/computer/`（`operator.py`、`coords.py`、`screen.py`）、`nanomuse/phone/`（`operator.py`、`trace.py`）、`harness/desktop/src/operator.ts`、Android 的 `io.github.nanomuse.hands`。
 - 阅读：[gui.md](gui.md)，操作器的约定；[troubleshooting.md](troubleshooting.md)。

@@ -146,6 +146,10 @@ jobs:
           uv pip install --python /tmp/smoke/bin/python dist/*.whl
           /tmp/smoke/bin/nanomuse version
 
+      - name: GUI regression report (offline reference)
+        if: env.RUN == 'true' && (matrix.os == 'ubuntu-latest' && matrix.python-version == '3.12')
+        run: uv run python scripts/gui_regression.py
+
   relay:
     name: relay · ruff and pytest
     needs: changes

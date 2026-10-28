@@ -87,3 +87,7 @@ cd web && npm run build             # type-checks and rebuilds the app
 ```
 
 `tests/test_server.py` drives the app server end to end with a scripted `MockLLM`: sending messages, approval cards, questions, goals, memory, files, settings.
+
+[Runtime retrieval and task budgets](runtime-budgets.md) explains full-store recall,
+input packing and per-task token, cost and time limits. [GUI regression](gui-regression.md)
+documents the fixed simulated tasks, independent result checks and reference/live runners.
